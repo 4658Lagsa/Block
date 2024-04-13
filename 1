@@ -1,0 +1,18 @@
+a = int(input())
+b = int(input())
+print(*list(range(a, b + 1)))
+
+flowchart TD
+    Start --> Input_A
+    Input_A --> |A ≤ B| Condition
+    Condition -- Нет --> Stop_Error
+    Condition -- Да --> Loop
+    Loop --> Output_A
+    Output_A --> Increment_A
+    Increment_A --> |A = A + 1| Condition_A
+    Condition_A --> |A ≤ B| Condition
+    Condition_A -- Нет --> Stop
+    Condition_A -- Да --> Loop
+    Stop_Error --> Stop
+    Stop --> End
+    End --> Stop
